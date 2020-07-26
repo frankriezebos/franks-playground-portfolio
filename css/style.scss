@@ -1,0 +1,75 @@
+@import 'typography';
+@import 'colors';
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: $coral;
+}
+
+.page-wrapper {
+    background-color: white;
+    height: 100%;
+    border-radius: 7px;
+    margin: 10px;
+}
+
+.logo-wrapper {
+    display: flex;
+}
+
+.logo {
+    p {
+        max-width: 200px;
+    }
+}
+
+.intro-wrapper {
+    text-align: center;
+}
+
+.settings-wrapper {
+    background-color: white;
+    border-radius: 40px;
+    padding: 20px;
+    margin: 0 auto;
+
+    .description {
+        h2 {
+            font-size: 20px;
+        }
+    }
+    
+    .settings {
+        display: inline-block;
+    }
+
+    .icon {
+        &-wrap {
+            float: left;
+            padding: 25px;
+            margin: 10px;
+            width: calc(15% - 20px);
+            background-color: $coral;
+            border-radius: 30px;
+        }
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0 auto;
+
+        &-theme {
+            background-image: url("/../img/icons/light/theme.svg");
+            width: 60px;
+            height: 50px;
+        }
+    }
+}
+
+@import 'responsive';

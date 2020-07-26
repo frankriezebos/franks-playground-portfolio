@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-Medium.eot');
+    src: url('Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Montserrat-Medium.woff2') format('woff2'),
+        url('Montserrat-Medium.woff') format('woff'),
+        url('Montserrat-Medium.ttf') format('truetype'),
+        url('Montserrat-Medium.svg#Montserrat-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont ExtraLight DEMO';
+    src: url('Mont-ExtraLightDEMO.eot');
+    src: url('Mont-ExtraLightDEMO.eot?#iefix') format('embedded-opentype'),
+        url('Mont-ExtraLightDEMO.woff2') format('woff2'),
+        url('Mont-ExtraLightDEMO.woff') format('woff'),
+        url('Mont-ExtraLightDEMO.ttf') format('truetype'),
+        url('Mont-ExtraLightDEMO.svg#Mont-ExtraLightDEMO') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont Heavy DEMO';
+    src: url('Mont-HeavyDEMO.eot');
+    src: url('Mont-HeavyDEMO.eot?#iefix') format('embedded-opentype'),
+        url('Mont-HeavyDEMO.woff2') format('woff2'),
+        url('Mont-HeavyDEMO.woff') format('woff'),
+        url('Mont-HeavyDEMO.ttf') format('truetype'),
+        url('Mont-HeavyDEMO.svg#Mont-HeavyDEMO') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
