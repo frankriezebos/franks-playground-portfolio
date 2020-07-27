@@ -25,7 +25,9 @@ body {
     }
 }
 .page-wrapper {
-    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 100%;
     border-radius: 7px;
     margin: 10px;
