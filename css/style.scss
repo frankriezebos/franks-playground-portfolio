@@ -12,6 +12,18 @@ body {
     background-color: $coral;
 }
 
+.photo{
+    overflow: hidden;
+    border-radius: 85px;
+    width: 85px;
+    height: 85px;   
+
+    img {
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+}
 .page-wrapper {
     background-color: white;
     height: 100%;
@@ -21,6 +33,14 @@ body {
 
 .logo-wrapper {
     display: flex;
+
+    &:hover {
+        .photo{
+            img {
+                transform: scale(1.3) rotate(360deg);
+            }
+        }
+    }
 }
 
 .logo {
