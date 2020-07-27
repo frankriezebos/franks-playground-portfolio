@@ -1,15 +1,36 @@
 @import 'typography';
 @import 'colors';
+@import 'animations';
 
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: calc(100% - 72px);
     width: 100%;
 }
 
 body {
     background-color: $coral;
+
+    &.light {
+        h1,h2,h3 {
+            color: $dark;
+        }
+
+        .collapsable {
+            background-color: $grey-light;
+        }
+
+        .arrow-up {
+            border-bottom-color: $grey-light;
+        }
+    }
+
+    &.dark {
+        h1,h2,h3 {
+            color: white;
+        }
+    }
 }
 
 .photo{
@@ -24,13 +45,25 @@ body {
         transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
 }
+
 .page-wrapper {
+    background-color: #FFF;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
-    border-radius: 7px;
-    margin: 10px;
+    margin: 12px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &.animateIn {
+        animation-name: animateIn;
+        animation-delay: 0.2s;
+        animation-duration: 0.5s;
+        animation-fill-mode: both;
+    }
 }
 
 .logo-wrapper {
@@ -46,13 +79,27 @@ body {
 }
 
 .logo {
+    padding-left: 10px;
+    padding-top: 10px;
+
     p {
         max-width: 200px;
+        margin: 0;
+        line-height: 1;
     }
 }
 
 .intro-wrapper {
     text-align: center;
+
+    h1 {
+        padding-bottom: 40px;
+    }
+}
+
+.header {
+    position: absolute;
+    top: 60px;
 }
 
 .settings-wrapper {
@@ -60,6 +107,9 @@ body {
     border-radius: 40px;
     padding: 20px;
     margin: 0 auto;
+    width: 480px;
+    position: relative;
+    padding-bottom: 40px;
 
     .description {
         h2 {
@@ -69,22 +119,49 @@ body {
     
     .settings {
         display: inline-block;
+
+        &-icon {
+            &-wrap {
+                width: 100px;
+                margin: 10px;
+                float: left;
+                cursor: pointer;
+
+                h3 {
+                    display: inline-block;
+                    font-size: 15px;
+                    margin-top: 10px;
+                }
+            }
+        }
     }
 
     .icon {
-        &-wrap {
-            float: left;
-            padding: 25px;
-            margin: 10px;
-            width: calc(15% - 20px);
-            background-color: $coral;
-            border-radius: 30px;
-        }
-
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         margin: 0 auto;
+
+        &-wrap {
+            width: 100px;
+            height: 100px;
+            float: left;
+            background-color: $coral;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            transition: all 0.25s ease-in-out;
+
+            &:hover {
+                box-shadow: 0px 2px 2px rgba(0,0,0,0.5) inset;
+                filter: brightness(0.95);
+            }
+
+            &.clicked {
+                box-shadow: 0px 2px 5px rgba(0,0,0,0.7) inset;
+                filter: brightness(0.9);
+            }
+        }
 
         &-theme {
             background-image: url("/../img/icons/light/theme.svg");
@@ -92,6 +169,52 @@ body {
             height: 50px;
         }
     }
+
+    .button {
+        position: absolute;
+        bottom: -30px;
+        left: 35%;
+        right: 35%;
+        margin: 0 auto;
+    }
+}
+
+.button {
+    background-color: $coral;
+    padding: 22px 45px;
+    border-radius: 40px;
+    color: #FFF;
+    font-size: 20px;
+}
+
+.collapsable {
+    position: relative;
+    border-radius: 25px;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+
+    &-wrapper {
+        overflow: hidden;
+        padding-top: 15px;
+    }
+
+    &.open {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid;
+    position: absolute;
+    top: -15px;
+    left: 40px;
 }
 
 @import 'responsive';

@@ -35,6 +35,7 @@ h1, h2, h3, a {
 }
 
 h1 {
+  margin: 0;
   font-size: 75px;
 }
 
@@ -47,10 +48,170 @@ h1.large {
   font-size: 40px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@-webkit-keyframes animateIn {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes animateIn {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animateOut {
+  0% {
+  }
+  100% {
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
+  }
+}
+
+@keyframes animateOut {
+  0% {
+  }
+  100% {
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation bounce-in-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes bounce-in-top {
+  0% {
+    -webkit-transform: translateY(-500px);
+    transform: translateY(-500px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(-65px);
+    transform: translateY(-65px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateY(-28px);
+    transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes bounce-in-top {
+  0% {
+    -webkit-transform: translateY(-500px);
+    transform: translateY(-500px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(-65px);
+    transform: translateY(-65px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateY(-28px);
+    transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: calc(100% - 72px);
   width: 100%;
 }
 
@@ -58,11 +219,65 @@ body {
   background-color: #FD6644;
 }
 
-.page-wrapper {
-  background-color: white;
+body.light h1, body.light h2, body.light h3 {
+  color: #202020;
+}
+
+body.light .collapsable {
+  background-color: #EFEFEF;
+}
+
+body.light .arrow-up {
+  border-bottom-color: #EFEFEF;
+}
+
+body.dark h1, body.dark h2, body.dark h3 {
+  color: white;
+}
+
+.photo {
+  overflow: hidden;
+  border-radius: 85px;
+  width: 85px;
+  height: 85px;
+}
+
+.photo img {
+  width: 100%;
   height: 100%;
-  border-radius: 7px;
-  margin: 10px;
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.page-wrapper {
+  background-color: #FFF;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  margin: 12px;
+  padding: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-wrapper.animateIn {
+  -webkit-animation-name: animateIn;
+          animation-name: animateIn;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .logo-wrapper {
@@ -71,12 +286,33 @@ body {
   display: flex;
 }
 
+.logo-wrapper:hover .photo img {
+  -webkit-transform: scale(1.3) rotate(360deg);
+          transform: scale(1.3) rotate(360deg);
+}
+
+.logo {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
 .logo p {
   max-width: 200px;
+  margin: 0;
+  line-height: 1;
 }
 
 .intro-wrapper {
   text-align: center;
+}
+
+.intro-wrapper h1 {
+  padding-bottom: 40px;
+}
+
+.header {
+  position: absolute;
+  top: 60px;
 }
 
 .settings-wrapper {
@@ -84,6 +320,9 @@ body {
   border-radius: 40px;
   padding: 20px;
   margin: 0 auto;
+  width: 480px;
+  position: relative;
+  padding-bottom: 40px;
 }
 
 .settings-wrapper .description h2 {
@@ -94,6 +333,19 @@ body {
   display: inline-block;
 }
 
+.settings-wrapper .settings-icon-wrap {
+  width: 100px;
+  margin: 10px;
+  float: left;
+  cursor: pointer;
+}
+
+.settings-wrapper .settings-icon-wrap h3 {
+  display: inline-block;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
 .settings-wrapper .icon {
   background-size: cover;
   background-repeat: no-repeat;
@@ -102,17 +354,88 @@ body {
 }
 
 .settings-wrapper .icon-wrap {
+  width: 100px;
+  height: 100px;
   float: left;
-  padding: 25px;
-  margin: 10px;
-  width: calc(15% - 20px);
   background-color: #FD6644;
   border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.settings-wrapper .icon-wrap:hover {
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5) inset;
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5) inset;
+  -webkit-filter: brightness(0.95);
+          filter: brightness(0.95);
+}
+
+.settings-wrapper .icon-wrap.clicked {
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7) inset;
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7) inset;
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
 }
 
 .settings-wrapper .icon-theme {
   background-image: url("/../img/icons/light/theme.svg");
   width: 60px;
   height: 50px;
+}
+
+.settings-wrapper .button {
+  position: absolute;
+  bottom: -30px;
+  left: 35%;
+  right: 35%;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: #FD6644;
+  padding: 22px 45px;
+  border-radius: 40px;
+  color: #FFF;
+  font-size: 20px;
+}
+
+.collapsable {
+  position: relative;
+  border-radius: 25px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.collapsable-wrapper {
+  overflow: hidden;
+  padding-top: 15px;
+}
+
+.collapsable.open {
+  opacity: 1;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid;
+  position: absolute;
+  top: -15px;
+  left: 40px;
 }
 /*# sourceMappingURL=style.css.map */

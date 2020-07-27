@@ -47,6 +47,7 @@ h1, h2, h3, a {
 }
 
 h1 {
+    margin: 0;
     font-size: 75px;
 
     &.large {
@@ -59,4 +60,9 @@ h1 {
         font-family: 'Mont ExtraLight DEMO', sans-serif;
         font-size: 40px;
     }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
