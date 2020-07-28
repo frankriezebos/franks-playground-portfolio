@@ -1,30 +1,18 @@
 import {
+    pageTransitions
+} from "./pageloader.js";
+import {
     attractHover
 } from "./attract.js";
+import {
+    settingsCollapse
+} from "./settingsCollapse.js";
 
 $(window).on('load', function () {
-    $('.page-wrapper').addClass('animateIn');
+    pageTransitions();
 });
 
 $(document).ready(function () {
     attractHover();
-
-    $('.collapsable-wrapper').addClass('hidden');
-
-    $('.settings-icon-wrap').click(function () {
-        if ($(this).hasClass('clicked')) {
-            $(this).removeClass('clicked');
-            $('.collapsable-wrapper').removeClass('popIn');
-            $('.collapsable-wrapper').addClass('popOut');
-        }
-
-        else {
-            $('.collapsable-wrapper').removeClass('popOut');
-            $('.collapsable-wrapper').removeClass('hidden');
-            $('.collapsable-wrapper').addClass('open');
-            $('.collapsable-wrapper').addClass('popIn');
-            $('.settings-icon-wrap').removeClass('clicked');
-            $(this).addClass('clicked');
-        }
-    });
+    settingsCollapse();
 });

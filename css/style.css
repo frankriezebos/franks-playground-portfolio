@@ -93,6 +93,32 @@ body.coral .icon-wrap {
   }
 }
 
+@-webkit-keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes animateOut {
   100% {
     -webkit-filter: blur(20px);
@@ -281,6 +307,23 @@ body.coral .icon-wrap {
   }
 }
 
+.popIn {
+  -webkit-animation: popIn 0.5s both;
+          animation: popIn 0.5s both;
+}
+
+.popOut {
+  -webkit-animation: popOut 1s both;
+          animation: popOut 1s both;
+}
+
+.zoomIn {
+  -webkit-animation: zoomIn 1s both;
+          animation: zoomIn 1s both;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
 .btn-hover, .settings-wrapper .settings-icon-wrap:hover .icon-wrap, .settings-wrapper .button:hover {
   -webkit-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2) inset;
           box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2) inset;
@@ -390,16 +433,34 @@ body.dark h3 {
 .logo-wrapper .logo {
   padding-left: 10px;
   padding-top: 10px;
+  overflow: hidden;
 }
 
 .logo-wrapper .logo p {
   max-width: 200px;
   margin: 0;
   line-height: 1;
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+.logo-wrapper .logo p.loaded {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .intro-wrapper {
   text-align: center;
+}
+
+.intro-wrapper.hidden {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
 }
 
 .intro-wrapper h1 {
@@ -532,15 +593,5 @@ body.dark h3 {
   position: absolute;
   top: -15px;
   left: 40px;
-}
-
-.popIn {
-  -webkit-animation: popIn 0.5s both;
-          animation: popIn 0.5s both;
-}
-
-.popOut {
-  -webkit-animation: popOut 1s both;
-          animation: popOut 1s both;
 }
 /*# sourceMappingURL=style.css.map */

@@ -12,6 +12,18 @@
         }
 }
 
+@keyframes zoomIn {
+        0% {
+                transform: scale(0);
+                opacity: 0;
+        }
+
+        100% {
+                transform: scale(1);
+                opacity: 1;
+        }
+}
+
 @keyframes animateOut {
         100% {
                 filter: blur(20px);
@@ -167,4 +179,17 @@
                 transform: scale(1);
                 filter: blur(20px);
         }
+}
+
+.popIn {
+        animation: popIn 0.5s both;
+}
+
+.popOut {
+        animation: popOut 1s both;
+}
+
+.zoomIn {
+        animation: zoomIn 1s both;
+        animation-delay: 0.2s;
 }

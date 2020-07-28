@@ -32,6 +32,32 @@
   }
 }
 
+@-webkit-keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes animateOut {
   100% {
     -webkit-filter: blur(20px);
@@ -218,5 +244,22 @@
     -webkit-filter: blur(20px);
             filter: blur(20px);
   }
+}
+
+.popIn {
+  -webkit-animation: popIn 0.5s both;
+          animation: popIn 0.5s both;
+}
+
+.popOut {
+  -webkit-animation: popOut 1s both;
+          animation: popOut 1s both;
+}
+
+.zoomIn {
+  -webkit-animation: zoomIn 1s both;
+          animation: zoomIn 1s both;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 /*# sourceMappingURL=animations.css.map */

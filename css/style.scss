@@ -99,17 +99,30 @@ body {
     .logo {
         padding-left: 10px;
         padding-top: 10px;
+        overflow: hidden;
 
         p {
             max-width: 200px;
             margin: 0;
             line-height: 1;
+            transform: translateX(-200px);
+            transition: all 0.4s ease-in-out;
+            transition-delay: 0.8s;
+
+            &.loaded {
+                transform: translateY(0);
+            }
         }
     }
 }
 
 .intro-wrapper {
     text-align: center;
+
+    &.hidden {
+        transform: scale(0);
+        opacity: 0;
+    }
 
     h1 {
         padding-bottom: 40px;
@@ -255,14 +268,6 @@ body {
     position: absolute;
     top: -15px;
     left: 40px;
-}
-
-.popIn {
-    animation: popIn 0.5s both;
-}
-
-.popOut {
-    animation: popOut 1s both;
 }
 
 @import 'responsive';
