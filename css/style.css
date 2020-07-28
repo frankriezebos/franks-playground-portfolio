@@ -64,11 +64,15 @@ body.coral .icon-wrap {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
     opacity: 0;
+    -webkit-filter: blur(30px);
+            filter: blur(30px);
   }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
   }
 }
 
@@ -77,11 +81,15 @@ body.coral .icon-wrap {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
     opacity: 0;
+    -webkit-filter: blur(30px);
+            filter: blur(30px);
   }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
   }
 }
 
