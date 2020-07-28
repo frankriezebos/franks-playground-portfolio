@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Montserrat';
-  src: url("/../fonts/Montserrat-Medium.eot");
-  src: url("/../fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("/../fonts/Montserrat-Medium.woff2") format("woff2"), url("/../fonts/Montserrat-Medium.woff") format("woff"), url("/../fonts/Montserrat-Medium.ttf") format("truetype"), url("/../fonts/Montserrat-Medium.svg#Montserrat-Medium") format("svg");
+  src: url("../fonts/Montserrat-Medium.eot");
+  src: url("../fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.ttf") format("truetype"), url("../fonts/Montserrat-Medium.svg#Montserrat-Medium") format("svg");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: 'Mont ExtraLight DEMO';
-  src: url("/../fonts/Mont-ExtraLightDEMO.eot");
-  src: url("/../fonts/Mont-ExtraLightDEMO.eot?#iefix") format("embedded-opentype"), url("/../fonts/Mont-ExtraLightDEMO.woff2") format("woff2"), url("/../fonts/Mont-ExtraLightDEMO.woff") format("woff"), url("/../fonts/Mont-ExtraLightDEMO.ttf") format("truetype"), url("/../fonts/Mont-ExtraLightDEMO.svg#Mont-ExtraLightDEMO") format("svg");
+  src: url("../fonts/Mont-ExtraLightDEMO.eot");
+  src: url("../fonts/Mont-ExtraLightDEMO.eot?#iefix") format("embedded-opentype"), url("../fonts/Mont-ExtraLightDEMO.woff2") format("woff2"), url("../fonts/Mont-ExtraLightDEMO.woff") format("woff"), url("../fonts/Mont-ExtraLightDEMO.ttf") format("truetype"), url("../fonts/Mont-ExtraLightDEMO.svg#Mont-ExtraLightDEMO") format("svg");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: 'Mont Heavy DEMO';
-  src: url("/../fonts/Mont-HeavyDEMO.eot");
-  src: url("/../fonts/Mont-HeavyDEMO.eot?#iefix") format("embedded-opentype"), url("/../fonts/Mont-HeavyDEMO.woff2") format("woff2"), url("/../fonts/Mont-HeavyDEMO.woff") format("woff"), url("/../fonts/Mont-HeavyDEMO.ttf") format("truetype"), url("/../fonts/Mont-HeavyDEMO.svg#Mont-HeavyDEMO") format("svg");
+  src: url("../fonts/Mont-HeavyDEMO.eot");
+  src: url("../fonts/Mont-HeavyDEMO.eot?#iefix") format("embedded-opentype"), url("../fonts/Mont-HeavyDEMO.woff2") format("woff2"), url("../fonts/Mont-HeavyDEMO.woff") format("woff"), url("../fonts/Mont-HeavyDEMO.ttf") format("truetype"), url("../fonts/Mont-HeavyDEMO.svg#Mont-HeavyDEMO") format("svg");
   font-weight: 800;
   font-style: normal;
   font-display: swap;

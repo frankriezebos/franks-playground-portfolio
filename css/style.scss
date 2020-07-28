@@ -1,8 +1,10 @@
 @import 'typography';
 @import 'colors';
 @import 'animations';
+@import 'transitions';
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     height: calc(100% - 72px);
@@ -10,39 +12,43 @@ body, html {
 }
 
 body {
-    background-color: $coral;
+    &.coral {
+        @extend .coral-gradient;
+
+        .button,
+        .icon-wrap {
+            @extend .coral-gradient;
+        }
+    }
 
     &.light {
-        h1,h2,h3 {
+
+        h1,
+        h2,
+        h3 {
             color: $dark;
         }
 
         .collapsable {
-            background-color: $grey-light;
+            background-color: white;
         }
 
         .arrow-up {
-            border-bottom-color: $grey-light;
+            border-bottom-color: white;
+        }
+
+        .settings-wrapper {
+            background-color: rgba(255, 255, 255, 0.5);
         }
     }
 
     &.dark {
-        h1,h2,h3 {
+
+        h1,
+        h2,
+        h3 {
             color: white;
         }
-    }
-}
-
-.photo{
-    overflow: hidden;
-    border-radius: 85px;
-    width: 85px;
-    height: 85px;   
-
-    img {
-        width: 100%;
-        height: 100%;
-        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
 }
 
@@ -70,22 +76,35 @@ body {
     display: flex;
 
     &:hover {
-        .photo{
+        .photo {
             img {
-                transform: scale(1.3) rotate(360deg);
+                transform: scale(1.25) rotate(360deg);
             }
         }
     }
-}
 
-.logo {
-    padding-left: 10px;
-    padding-top: 10px;
+    .photo {
+        overflow: hidden;
+        border-radius: 85px;
+        width: 85px;
+        height: 85px;
 
-    p {
-        max-width: 200px;
-        margin: 0;
-        line-height: 1;
+        img {
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+    }
+
+    .logo {
+        padding-left: 10px;
+        padding-top: 10px;
+
+        p {
+            max-width: 200px;
+            margin: 0;
+            line-height: 1;
+        }
     }
 }
 
@@ -103,22 +122,27 @@ body {
 }
 
 .settings-wrapper {
-    background-color: white;
+    backdrop-filter: blur(2px);
     border-radius: 40px;
     padding: 20px;
     margin: 0 auto;
-    width: 480px;
+    width: 500px;
     position: relative;
     padding-bottom: 40px;
+    transition: all 0.4s ease-in-out;
 
     .description {
         h2 {
             font-size: 20px;
         }
     }
-    
+
     .settings {
         display: inline-block;
+
+        .attract-hover {
+            float: left;
+        }
 
         &-icon {
             &-wrap {
@@ -126,6 +150,18 @@ body {
                 margin: 10px;
                 float: left;
                 cursor: pointer;
+
+                &:hover {
+                    .icon-wrap {
+                        @extend .btn-hover;
+                    }
+                }
+
+                &.clicked {
+                    .icon-wrap {
+                        @extend .btn-clicked;
+                    }
+                }
 
                 h3 {
                     display: inline-block;
@@ -146,25 +182,14 @@ body {
             width: 100px;
             height: 100px;
             float: left;
-            background-color: $coral;
             border-radius: 30px;
             display: flex;
             align-items: center;
-            transition: all 0.25s ease-in-out;
-
-            &:hover {
-                box-shadow: 0px 2px 2px rgba(0,0,0,0.5) inset;
-                filter: brightness(0.95);
-            }
-
-            &.clicked {
-                box-shadow: 0px 2px 5px rgba(0,0,0,0.7) inset;
-                filter: brightness(0.9);
-            }
+            transition: all 0.15s ease-in-out;
         }
 
         &-theme {
-            background-image: url("/../img/icons/light/theme.svg");
+            background-image: url("../img/icons/light/theme.svg");
             width: 60px;
             height: 50px;
         }
@@ -176,11 +201,21 @@ body {
         left: 35%;
         right: 35%;
         margin: 0 auto;
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+            @extend .btn-hover;
+        }
+
+        &.clicked,
+        &:active,
+        &:focus {
+            @extend .btn-clicked;
+        }
     }
 }
 
 .button {
-    background-color: $coral;
     padding: 22px 45px;
     border-radius: 40px;
     color: #FFF;
@@ -190,31 +225,44 @@ body {
 .collapsable {
     position: relative;
     border-radius: 25px;
-    transition: all 0.4s ease-in-out;
-    opacity: 0;
-    transform: scaleY(0);
-    transform-origin: top;
+    margin-bottom: 20px;
 
     &-wrapper {
         overflow: hidden;
         padding-top: 15px;
-    }
+        transition: all 0.4s ease-in-out;
 
-    &.open {
-        opacity: 1;
-        transform: scaleY(1);
+        &.hidden {
+            opacity: 0;
+            transform: scale(0);
+            transform-origin: top;
+            height: 0;
+            filter: blur(20px);
+        }
+
+        &.open {
+            transform: scale(1);
+        }
     }
 }
 
 .arrow-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-bottom: 15px solid;
     position: absolute;
     top: -15px;
     left: 40px;
+}
+
+.popIn {
+    animation: popIn 0.5s both;
+}
+
+.popOut {
+    animation: popOut 1s both;
 }
 
 @import 'responsive';

@@ -1,19 +1,30 @@
-$(window).on('load', function(){
+import {
+    attractHover
+} from "./attract.js";
+
+$(window).on('load', function () {
     $('.page-wrapper').addClass('animateIn');
 });
 
-$(document).ready(function(){
-    $('.settings-icon-wrap').click(function(){
-        $('.collapsable').addClass('open');
-    });
+$(document).ready(function () {
+    attractHover();
 
-    $('.icon-wrap').click(function(){
-        $('.icon-wrap').removeClass('clicked');
-        $(this).addClass('clicked');
-    });
+    $('.collapsable-wrapper').addClass('hidden');
 
-    $('.icon-wrap.clicked').click(function(){
-        $(this).removeClass('clicked');
-        $('.collapsable').removeClass('open');
+    $('.settings-icon-wrap').click(function () {
+        if ($(this).hasClass('clicked')) {
+            $(this).removeClass('clicked');
+            $('.collapsable-wrapper').removeClass('popIn');
+            $('.collapsable-wrapper').addClass('popOut');
+        }
+
+        else {
+            $('.collapsable-wrapper').removeClass('popOut');
+            $('.collapsable-wrapper').removeClass('hidden');
+            $('.collapsable-wrapper').addClass('open');
+            $('.collapsable-wrapper').addClass('popIn');
+            $('.settings-icon-wrap').removeClass('clicked');
+            $(this).addClass('clicked');
+        }
     });
 });
