@@ -1,19 +1,18 @@
-$(window).on('load', function(){
-    $('.page-wrapper').addClass('animateIn');
+import {
+    pageTransitions
+} from "./pageloader.js";
+import {
+    attractHover
+} from "./attract.js";
+import {
+    settingsCollapse
+} from "./settingsCollapse.js";
+
+$(window).on('load', function () {
+    pageTransitions();
 });
 
-$(document).ready(function(){
-    $('.settings-icon-wrap').click(function(){
-        $('.collapsable').addClass('open');
-    });
-
-    $('.icon-wrap').click(function(){
-        $('.icon-wrap').removeClass('clicked');
-        $(this).addClass('clicked');
-    });
-
-    $('.icon-wrap.clicked').click(function(){
-        $(this).removeClass('clicked');
-        $('.collapsable').removeClass('open');
-    });
+$(document).ready(function () {
+    attractHover();
+    settingsCollapse();
 });

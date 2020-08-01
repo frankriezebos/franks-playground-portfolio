@@ -5,13 +5,14 @@
     <meta charset="utf-8">
     <title>Intro - Frank's Digital playground</title>
     <meta name="author" content="Frank Riezebos">
-    <meta name="description" content="Frank's Digital playground is all about interaction and experiences. At least, I hope so!">
+    <meta name="description"
+        content="Frank's Digital playground is all about interaction and experiences. At least, I hope so!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="light">
+<body class="light coral">
     <div class="page-wrapper" style="background-image:url('img/wallpapers/beach.jpg')">
         <div class="header">
             <div class="logo-wrapper">
@@ -25,7 +26,7 @@
             </div>
         </div>
 
-        <div class="intro-wrapper">
+        <div class="intro-wrapper hidden">
             <div class="heading">
                 <h1 class="large">welcome!</h1>
             </div>
@@ -36,28 +37,28 @@
                 </div>
 
                 <div class="settings">
-                    <div class="settings-icon-wrap">
+                    <div class="settings-icon-wrap js-attract-hover" data-trigger-setting="theme">
                         <div class="icon-wrap">
                             <div class="icon icon-theme"></div>
                         </div>
                         <h3>Light mode</h3>
                     </div>
 
-                    <div class="settings-icon-wrap">
+                    <div class="settings-icon-wrap" data-trigger-setting="sound">
                         <div class="icon-wrap">
                             <div class="icon icon-sound"></div>
                         </div>
                         <h3>Sound on</h3>
                     </div>
 
-                    <div class="settings-icon-wrap">
+                    <div class="settings-icon-wrap" data-trigger-setting="color">
                         <div class="icon-wrap">
                             <div class="icon icon-color"></div>
                         </div>
                         <h3>Coral</h3>
                     </div>
 
-                    <div class="settings-icon-wrap">
+                    <div class="settings-icon-wrap" data-trigger-setting="beach">
                         <div class="icon-wrap">
                             <div class="icon icon-vibe"></div>
                         </div>
@@ -68,15 +69,15 @@
                 <div class="collapsable-wrapper">
                     <div class="collapsable">
                         <div class="arrow-up"></div>
-                        <div class="collapsable-theme">
+                        <div class="collapsable-item" data-setting="theme">
                             Theme
                         </div>
 
-                        <div class="collapsable-color">
+                        <div class="collapsable-item" data-setting="color">
                             Color
                         </div>
 
-                        <div class="collapsable-vibe">
+                        <div class="collapsable-item" data-setting="vibe">
                             Vibe
                         </div>
                     </div>
@@ -87,12 +88,11 @@
                 </div>
             </div>
         </div>
-
-        
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <script type="module" src="js/attractHover.min.js"></script>
+    <script type="module" src="js/main.min.js"></script>
 </body>
 
 </html>
