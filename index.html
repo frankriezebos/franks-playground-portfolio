@@ -13,6 +13,11 @@
 </head>
 
 <body class="light coral">
+    <div class="pageBorder pageBorder-Top animateInDelayMiliSeconds-6"></div>
+    <div class="pageBorder pageBorder-Right animateInDelayMiliSeconds-7"></div>
+    <div class="pageBorder pageBorder-Bottom animateInDelayMiliSeconds-8"></div>
+    <div class="pageBorder pageBorder-Left animateInDelayMiliSeconds-9"></div>
+
     <div class="page-wrapper" style="background-image:url('img/wallpapers/beach.jpg')">
         <div class="header">
             <div class="logo-wrapper">
@@ -26,7 +31,7 @@
             </div>
         </div>
 
-        <div class="intro-wrapper hidden">
+        <div class="intro-wrapper hidden animateInDelayMiliSeconds-7">
             <div class="heading">
                 <h1 class="large">welcome!</h1>
             </div>
@@ -37,7 +42,7 @@
                 </div>
 
                 <div class="settings">
-                    <div class="settings-icon-wrap js-attract-hover" data-trigger-setting="theme">
+                    <div class="settings-icon-wrap" data-trigger-setting="theme">
                         <div class="icon-wrap">
                             <div class="icon icon-theme"></div>
                         </div>
@@ -84,13 +89,15 @@
                 </div>
 
                 <div class="settings-button">
-                    <a href="welcome.html" class="button enter">Enter</a>
+                    <a href="welcome.html" class="button mouse-cursor-gradient-tracking zoomOnHover">
+                        <span>Enter!</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="module" src="js/attractHover.min.js"></script>
     <script type="module" src="js/main.min.js"></script>
 </body>
