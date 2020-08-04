@@ -7,6 +7,9 @@ import {
 import {
     settingsCollapse
 } from "./settingsCollapse.js";
+import {
+    followMouse
+} from "./followMouse.js";
 
 $(window).on('load', function () {
     pageTransitions();
@@ -15,4 +18,5 @@ $(window).on('load', function () {
 $(document).ready(function () {
     attractHover();
     settingsCollapse();
+    followMouse();
 });
