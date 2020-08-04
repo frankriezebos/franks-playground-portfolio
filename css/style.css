@@ -53,10 +53,150 @@ a {
   color: inherit;
 }
 
-.coral-gradient, body.coral, body.coral .button,
-body.coral .icon-wrap {
+.coral-gradient, body.coral .icon-wrap,
+body.coral .pageBorder,
+body.coral .mouse-cursor-gradient-tracking {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#FF8362), to(#ff5c40));
   background-image: linear-gradient(to bottom right, #FF8362, #ff5c40);
+}
+
+.animateInDelayMiliSeconds-1 {
+  -webkit-animation-delay: 0.1s!important;
+          animation-delay: 0.1s!important;
+}
+
+.animateInDelayMiliSeconds-2 {
+  -webkit-animation-delay: 0.2s!important;
+          animation-delay: 0.2s!important;
+}
+
+.animateInDelayMiliSeconds-3 {
+  -webkit-animation-delay: 0.3s!important;
+          animation-delay: 0.3s!important;
+}
+
+.animateInDelayMiliSeconds-4 {
+  -webkit-animation-delay: 0.4s!important;
+          animation-delay: 0.4s!important;
+}
+
+.animateInDelayMiliSeconds-5 {
+  -webkit-animation-delay: 0.5s!important;
+          animation-delay: 0.5s!important;
+}
+
+.animateInDelayMiliSeconds-6 {
+  -webkit-animation-delay: 0.6s!important;
+          animation-delay: 0.6s!important;
+}
+
+.animateInDelayMiliSeconds-7 {
+  -webkit-animation-delay: 0.7s!important;
+          animation-delay: 0.7s!important;
+}
+
+.animateInDelayMiliSeconds-8 {
+  -webkit-animation-delay: 0.8s!important;
+          animation-delay: 0.8s!important;
+}
+
+.animateInDelayMiliSeconds-9 {
+  -webkit-animation-delay: 0.9s!important;
+          animation-delay: 0.9s!important;
+}
+
+.animateInDelaySeconds-1 {
+  -webkit-animation-delay: 1s!important;
+          animation-delay: 1s!important;
+}
+
+.animateInDelaySeconds-2 {
+  -webkit-animation-delay: 2s!important;
+          animation-delay: 2s!important;
+}
+
+.animateInDelaySeconds-3 {
+  -webkit-animation-delay: 3s!important;
+          animation-delay: 3s!important;
+}
+
+.animateInDelaySeconds-4 {
+  -webkit-animation-delay: 4s!important;
+          animation-delay: 4s!important;
+}
+
+.animateInDelaySeconds-5 {
+  -webkit-animation-delay: 5s!important;
+          animation-delay: 5s!important;
+}
+
+.animateInDelaySeconds-6 {
+  -webkit-animation-delay: 6s!important;
+          animation-delay: 6s!important;
+}
+
+.animateInDelaySeconds-7 {
+  -webkit-animation-delay: 7s!important;
+          animation-delay: 7s!important;
+}
+
+.animateInDelaySeconds-8 {
+  -webkit-animation-delay: 8s!important;
+          animation-delay: 8s!important;
+}
+
+.animateInDelaySeconds-9 {
+  -webkit-animation-delay: 9s!important;
+          animation-delay: 9s!important;
+}
+
+.attract-hover-easing {
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@-webkit-keyframes pageBorderHorizontal {
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes pageBorderHorizontal {
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pageBorderVertical {
+  0% {
+    height: 0px;
+    opacity: 0;
+  }
+  100% {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes pageBorderVertical {
+  0% {
+    height: 0px;
+    opacity: 0;
+  }
+  100% {
+    height: 100%;
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes animateIn {
@@ -64,15 +204,11 @@ body.coral .icon-wrap {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
     opacity: 0;
-    -webkit-filter: blur(30px);
-            filter: blur(30px);
   }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
   }
 }
 
@@ -81,15 +217,11 @@ body.coral .icon-wrap {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
     opacity: 0;
-    -webkit-filter: blur(30px);
-            filter: blur(30px);
   }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
   }
 }
 
@@ -320,13 +452,9 @@ body.coral .icon-wrap {
 .zoomIn {
   -webkit-animation: zoomIn 1s both;
           animation: zoomIn 1s both;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
 }
 
 .btn-hover, .settings-wrapper .settings-icon-wrap:hover .icon-wrap, .settings-wrapper .button:hover {
-  -webkit-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2) inset;
-          box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2) inset;
   -webkit-filter: brightness(0.95);
           filter: brightness(0.95);
 }
@@ -374,6 +502,48 @@ body.dark h3 {
   color: white;
 }
 
+.pageBorder {
+  position: absolute;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-transition: all cubic-bezier(0.985, 0.01, 0.62, 1.145);
+  transition: all cubic-bezier(0.985, 0.01, 0.62, 1.145);
+}
+
+.pageBorder-Top, .pageBorder-Bottom {
+  height: 13px;
+  -webkit-animation-name: pageBorderHorizontal;
+          animation-name: pageBorderHorizontal;
+}
+
+.pageBorder-Left, .pageBorder-Right {
+  width: 13px;
+  -webkit-animation-name: pageBorderVertical;
+          animation-name: pageBorderVertical;
+}
+
+.pageBorder-Top {
+  top: 0;
+  left: 0;
+}
+
+.pageBorder-Bottom {
+  bottom: 0;
+  right: 0;
+}
+
+.pageBorder-Left {
+  left: 0;
+  bottom: 0;
+}
+
+.pageBorder-Right {
+  right: 0;
+  top: 0;
+}
+
 .page-wrapper {
   background-color: #FFF;
   background-size: cover;
@@ -412,8 +582,8 @@ body.dark h3 {
 }
 
 .logo-wrapper:hover .photo img {
-  -webkit-transform: scale(1.25) rotate(360deg);
-          transform: scale(1.25) rotate(360deg);
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 
 .logo-wrapper .photo {
@@ -444,8 +614,8 @@ body.dark h3 {
           transform: translateX(-200px);
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  -webkit-transition-delay: 0.8s;
-          transition-delay: 0.8s;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 
 .logo-wrapper .logo p.loaded {
@@ -553,6 +723,43 @@ body.dark h3 {
   border-radius: 40px;
   color: #FFF;
   font-size: 20px;
+}
+
+.button.zoomOnHover:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.mouse-cursor-gradient-tracking {
+  position: relative;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+}
+
+.mouse-cursor-gradient-tracking span {
+  position: relative;
+  pointer-events: none;
+}
+
+.mouse-cursor-gradient-tracking:before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.2), transparent);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: width 0.2s ease, height 0.2s ease;
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.mouse-cursor-gradient-tracking:hover:before {
+  --size: 200px;
 }
 
 .collapsable {

@@ -13,10 +13,11 @@ html {
 
 body {
     &.coral {
-        @extend .coral-gradient;
+        // @extend .coral-gradient;
 
-        .button,
-        .icon-wrap {
+        .icon-wrap,
+        .pageBorder,
+        .mouse-cursor-gradient-tracking {
             @extend .coral-gradient;
         }
     }
@@ -52,6 +53,45 @@ body {
     }
 }
 
+.pageBorder {
+    position: absolute;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    transition: all cubic-bezier(0.985, 0.010, 0.620, 1.145);
+
+    &-Top,
+    &-Bottom {
+        height: 13px;
+        animation-name: pageBorderHorizontal;
+    }
+
+    &-Left,
+    &-Right {
+        width: 13px;
+        animation-name: pageBorderVertical;
+    }
+
+    &-Top {
+        top: 0;
+        left: 0;
+    }
+
+    &-Bottom {
+        bottom: 0;
+        right: 0;
+    }
+
+    &-Left {
+        left: 0;
+        bottom: 0;
+    }
+
+    &-Right {
+        right: 0;
+        top: 0;
+    }
+}
+
 .page-wrapper {
     background-color: #FFF;
     background-size: cover;
@@ -78,7 +118,7 @@ body {
     &:hover {
         .photo {
             img {
-                transform: scale(1.25) rotate(360deg);
+                transform: scale(1.25);
             }
         }
     }
@@ -107,7 +147,7 @@ body {
             line-height: 1;
             transform: translateX(-200px);
             transition: all 0.4s ease-in-out;
-            transition-delay: 0.8s;
+            transition-delay: 0.4s;
 
             &.loaded {
                 transform: translateY(0);
@@ -233,6 +273,42 @@ body {
     border-radius: 40px;
     color: #FFF;
     font-size: 20px;
+
+    &.zoomOnHover {
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.mouse-cursor-gradient-tracking {
+    position: relative;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+}
+
+.mouse-cursor-gradient-tracking span {
+    position: relative;
+    pointer-events: none;
+}
+
+.mouse-cursor-gradient-tracking:before {
+    --size: 0;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.2), transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease;
+}
+
+.mouse-cursor-gradient-tracking:hover:before {
+    --size: 200px;
 }
 
 .collapsable {
