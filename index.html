@@ -12,7 +12,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="light coral">
+<body data-theme="light" data-color="coral" data-sound="on" data-vibe="beach">
     <div class="pageBorder pageBorder-Top animateInDelayMiliSeconds-6"></div>
     <div class="pageBorder pageBorder-Right animateInDelayMiliSeconds-7"></div>
     <div class="pageBorder pageBorder-Bottom animateInDelayMiliSeconds-8"></div>
@@ -31,8 +31,8 @@
             </div>
         </div>
 
-        <div class="intro-wrapper hidden animateInDelayMiliSeconds-7">
-            <div class="heading">
+        <div class="intro-wrapper hidden animateInDelaySeconds-1">
+            <div data-tilt data-tilt-full-page-listening class="heading">
                 <h1 class="large">welcome!</h1>
             </div>
 
@@ -63,7 +63,7 @@
                         <h3>Coral</h3>
                     </div>
 
-                    <div class="settings-icon-wrap" data-trigger-setting="beach">
+                    <div class="settings-icon-wrap" data-trigger-setting="vibe">
                         <div class="icon-wrap">
                             <div class="icon icon-vibe"></div>
                         </div>
@@ -74,15 +74,22 @@
                 <div class="collapsable-wrapper">
                     <div class="collapsable">
                         <div class="arrow-up"></div>
-                        <div class="collapsable-item" data-setting="theme">
-                            Theme
+                        <div class="collapsable-item" data-target-setting="theme">
+                            <ul>
+                                <li class="light-icon" data-trigger-theme="light">light</li>
+                                <li class="dark-icon" data-trigger-theme="dark">dark</li>
+                            </ul>
                         </div>
 
-                        <div class="collapsable-item" data-setting="color">
+                        <div class="collapsable-item" data-target-setting="sound">
+                            Sound
+                        </div>
+
+                        <div class="collapsable-item" data-target-setting="color">
                             Color
                         </div>
 
-                        <div class="collapsable-item" data-setting="vibe">
+                        <div class="collapsable-item" data-target-setting="vibe">
                             Vibe
                         </div>
                     </div>
@@ -97,7 +104,8 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="module" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="module" src="node_modules/vanilla-tilt/dist/vanilla-tilt.min.js"></script>
     <script type="module" src="js/attractHover.min.js"></script>
     <script type="module" src="js/main.min.js"></script>
 </body>

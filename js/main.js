@@ -10,6 +10,9 @@ import {
 import {
     followMouse
 } from "./followMouse.js";
+import {
+    themeSwitch
+} from "./themeSwitch.js";
 
 $(window).on('load', function () {
     pageTransitions();
@@ -19,4 +22,5 @@ $(document).ready(function () {
     attractHover();
     settingsCollapse();
     followMouse();
+    themeSwitch();
 });

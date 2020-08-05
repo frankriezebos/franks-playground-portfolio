@@ -1,0 +1,24 @@
+{
+  "name": "franks-playground-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "vanilla-tilt": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankriezebos/franks-playground-portfolio.git"
+  },
+  "author": "Frank Riezebos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frankriezebos/franks-playground-portfolio/issues"
+  },
+  "homepage": "https://github.com/frankriezebos/franks-playground-portfolio#readme"
+}

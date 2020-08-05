@@ -2,6 +2,10 @@ export function settingsCollapse() {
     $('.collapsable-wrapper').addClass('hidden');
 
     $('.settings-icon-wrap').click(function () {
+        var dataTriggerSettingAttr = $(this).attr('data-trigger-setting');
+        $('.collapsable-item').removeClass('visible');
+        $('.collapsable-item[data-target-setting="' + dataTriggerSettingAttr + '"]').addClass('visible');
+
         if ($(this).hasClass('clicked')) {
             $(this).removeClass('clicked');
             $('.collapsable-wrapper').removeClass('popIn');
