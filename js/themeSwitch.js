@@ -21,18 +21,42 @@ export function themeSwitch() {
     });
 
     $('[data-trigger-theme="dark"]').click(function() {
-        console.log('oke maak het donker!');
-        $('body').attr('data-theme', 'dark');
-        $('[data-trigger-theme="light"]').removeClass('active');
-        $(this).removeClass('dim');
-        $(this).addClass('active');
+        makeItDark();
     });
 
     $('[data-trigger-theme="light"]').click(function() {
-        console.log('oke maak het licht!');
+        makeItLight();
+    });
+
+    // detect system/browser theme
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        makeItDark();
+    } else {
+        makeItLight();
+    }
+
+    // detect change of system/browser theme
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const newColorScheme = e.matches ? "dark" : "light";
+    });
+
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
+        const newColorScheme = e.matches ? "light" : "dark";
+    });
+
+    function makeItLight() {
         $('body').attr('data-theme', 'light');
         $('[data-trigger-theme="dark"]').removeClass('active');
-        $(this).removeClass('dim');
-        $(this).addClass('active');
-    });
+        $('[data-trigger-theme="dark"]').addClass('dim');
+        $('[data-trigger-theme="light"]').removeClass('dim');
+        $('[data-trigger-theme="light"]').addClass('active');
+    }
+
+    function makeItDark() {
+        $('body').attr('data-theme', 'dark');
+        $('[data-trigger-theme="light"]').removeClass('active');
+        $('[data-trigger-theme="light"]').addClass('dim');
+        $('[data-trigger-theme="dark"]').removeClass('dim');
+        $('[data-trigger-theme="dark"]').addClass('active');
+    }
 }
