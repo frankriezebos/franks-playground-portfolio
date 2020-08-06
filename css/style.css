@@ -472,84 +472,149 @@ body[data-color="coral"] .mouse-cursor-gradient-tracking {
   display: block;
 }
 
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3 {
+  color: #202020;
+}
+
+[data-theme="light"] .page-wrapper:before {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="light"] .collapsable {
+  background-color: white;
+}
+
+[data-theme="light"] .collapsable-item li,
+[data-theme="light"] .collapsable-item p {
+  color: #202020;
+}
+
+[data-theme="light"] .arrow-up {
+  border-bottom-color: white;
+}
+
+[data-theme="light"] .settings-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="light"] .light-icon:before {
+  background-image: url("../img/icons/light/setting-theme.svg");
+}
+
+[data-theme="light"] .dark-icon:before {
+  background-image: url("../img/icons/light/setting-theme-dark.svg");
+}
+
+@media (prefers-color-scheme: light) {
+  [data-theme="light"] h1,
+  [data-theme="light"] h2,
+  [data-theme="light"] h3 {
+    color: #202020;
+  }
+  [data-theme="light"] .page-wrapper:before {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  [data-theme="light"] .collapsable {
+    background-color: white;
+  }
+  [data-theme="light"] .collapsable-item li,
+  [data-theme="light"] .collapsable-item p {
+    color: #202020;
+  }
+  [data-theme="light"] .arrow-up {
+    border-bottom-color: white;
+  }
+  [data-theme="light"] .settings-wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  [data-theme="light"] .light-icon:before {
+    background-image: url("../img/icons/light/setting-theme.svg");
+  }
+  [data-theme="light"] .dark-icon:before {
+    background-image: url("../img/icons/light/setting-theme-dark.svg");
+  }
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+  color: white;
+}
+
+[data-theme="dark"] .page-wrapper:before {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .settings-wrapper {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .collapsable {
+  background-color: #202020;
+}
+
+[data-theme="dark"] .collapsable-item li,
+[data-theme="dark"] .collapsable-item p {
+  color: white;
+}
+
+[data-theme="dark"] .arrow-up {
+  border-bottom-color: #202020;
+}
+
+[data-theme="dark"] .logo {
+  color: white;
+}
+
+[data-theme="dark"] .light-icon:before {
+  background-image: url("../img/icons/dark/setting-light.svg");
+}
+
+[data-theme="dark"] .dark-icon:before {
+  background-image: url("../img/icons/dark/setting-dark.svg");
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-theme="dark"] h1,
+  [data-theme="dark"] h2,
+  [data-theme="dark"] h3 {
+    color: white;
+  }
+  [data-theme="dark"] .page-wrapper:before {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  [data-theme="dark"] .settings-wrapper {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+  [data-theme="dark"] .collapsable {
+    background-color: #202020;
+  }
+  [data-theme="dark"] .collapsable-item li,
+  [data-theme="dark"] .collapsable-item p {
+    color: white;
+  }
+  [data-theme="dark"] .arrow-up {
+    border-bottom-color: #202020;
+  }
+  [data-theme="dark"] .logo {
+    color: white;
+  }
+  [data-theme="dark"] .light-icon:before {
+    background-image: url("../img/icons/dark/setting-light.svg");
+  }
+  [data-theme="dark"] .dark-icon:before {
+    background-image: url("../img/icons/dark/setting-dark.svg");
+  }
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
   height: calc(100% - 72px);
   width: 100%;
-}
-
-body[data-theme="light"] h1,
-body[data-theme="light"] h2,
-body[data-theme="light"] h3 {
-  color: #202020;
-}
-
-body[data-theme="light"] .page-wrapper:before {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-body[data-theme="light"] .collapsable {
-  background-color: white;
-}
-
-body[data-theme="light"] .collapsable-item li, body[data-theme="light"] .collapsable-item p {
-  color: #202020;
-}
-
-body[data-theme="light"] .arrow-up {
-  border-bottom-color: white;
-}
-
-body[data-theme="light"] .settings-wrapper {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-body[data-theme="light"] .light-icon:before {
-  background-image: url("../img/icons/light/setting-theme.svg");
-}
-
-body[data-theme="light"] .dark-icon:before {
-  background-image: url("../img/icons/light/setting-theme-dark.svg");
-}
-
-body[data-theme="dark"] h1,
-body[data-theme="dark"] h2,
-body[data-theme="dark"] h3 {
-  color: white;
-}
-
-body[data-theme="dark"] .page-wrapper:before {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-body[data-theme="dark"] .settings-wrapper {
-  background-color: rgba(0, 0, 0, 0.15);
-}
-
-body[data-theme="dark"] .collapsable {
-  background-color: #202020;
-}
-
-body[data-theme="dark"] .collapsable-item li, body[data-theme="dark"] .collapsable-item p {
-  color: white;
-}
-
-body[data-theme="dark"] .arrow-up {
-  border-bottom-color: #202020;
-}
-
-body[data-theme="dark"] .logo {
-  color: white;
-}
-
-body[data-theme="dark"] .light-icon:before {
-  background-image: url("../img/icons/dark/setting-light.svg");
-}
-
-body[data-theme="dark"] .dark-icon:before {
-  background-image: url("../img/icons/dark/setting-dark.svg");
 }
 
 .pageBorder {

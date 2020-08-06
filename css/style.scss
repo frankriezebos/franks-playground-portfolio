@@ -2,6 +2,8 @@
 @import 'colors';
 @import 'animations';
 @import 'transitions';
+@import 'light';
+@import 'dark';
 
 body,
 html {
@@ -13,98 +15,11 @@ html {
 
 body {
     &[data-color="coral"] {
-        // @extend .coral-gradient;
 
         .icon-wrap,
         .pageBorder,
         .mouse-cursor-gradient-tracking {
             @extend .coral-gradient;
-        }
-    }
-
-    &[data-theme="light"] {
-
-        h1,
-        h2,
-        h3 {
-            color: $dark;
-        }
-
-        .page-wrapper {
-            &:before {
-                background-color: rgba(255, 255, 255, 0.15);
-            }
-        }
-
-        .collapsable {
-            background-color: white;
-
-            &-item {
-                li,p {
-                    color: $dark;
-                }
-            }
-        }
-
-        .arrow-up {
-            border-bottom-color: white;
-        }
-
-        .settings-wrapper {
-            background-color: rgba(255, 255, 255, 0.5);
-        }
-
-        .light-icon:before {
-            background-image: url("../img/icons/light/setting-theme.svg");
-        }
-
-        .dark-icon:before {
-            background-image: url("../img/icons/light/setting-theme-dark.svg");
-        }
-    }
-
-    &[data-theme="dark"] {
-
-        h1,
-        h2,
-        h3 {
-            color: white;
-        }
-
-        .page-wrapper {
-            &:before {
-                background-color: rgba(0, 0, 0, 0.6);
-            }
-        }
-
-        .settings-wrapper {
-            background-color: rgba(0, 0, 0, 0.15);
-        }
-
-        .collapsable {
-            background-color: $dark;
-
-            &-item {
-                li,p {
-                    color: white;
-                }
-            }
-        }
-
-        .arrow-up {
-            border-bottom-color: $dark;
-        }
-
-        .logo {
-            color: white;
-        }
-
-        .light-icon:before {
-            background-image: url("../img/icons/dark/setting-light.svg");
-        }
-
-        .dark-icon:before {
-            background-image: url("../img/icons/dark/setting-dark.svg");
         }
     }
 }
@@ -167,7 +82,7 @@ body {
         left: 0;
         right: 0;
         top: 0;
-        bottom: 0; 
+        bottom: 0;
         width: 100%;
         height: 100%;
     }
@@ -446,7 +361,7 @@ body {
             padding: 0;
             display: inline-block;
         }
-        
+
         li,
         p {
             font-family: 'Mont Heavy DEMO', sans-serif;
