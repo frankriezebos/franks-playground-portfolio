@@ -1,0 +1,70 @@
+@import 'colors'
+
+[data-theme="dark"]
+    h1,
+    h2,
+    h3
+        color: white
+
+    .page-wrapper
+        &:before
+            background-color: rgba(0, 0, 0, 0.6)
+
+    .settings-wrapper
+        background-color: rgba(0, 0, 0, 0.15)
+
+    .collapsable
+        background-color: $dark
+
+        &-item
+
+            li,
+            p
+                color: white
+
+    .arrow-up
+        border-bottom-color: $dark
+
+    .logo
+        color: white
+
+    .light-icon:before
+        background-image: url("../../img/icons/dark/setting-light.svg")
+
+    .dark-icon:before
+        background-image: url("../../img/icons/dark/setting-dark.svg")
+
+@media (prefers-color-scheme: dark)
+    [data-theme="dark"]
+        h1,
+        h2,
+        h3
+            color: white
+
+        .page-wrapper
+            &:before
+                background-color: rgba(0, 0, 0, 0.6)
+
+        .settings-wrapper
+            background-color: rgba(0, 0, 0, 0.15)
+
+        .collapsable
+            background-color: $dark
+
+            &-item
+
+                li,
+                p
+                    color: white
+
+        .arrow-up
+            border-bottom-color: $dark
+
+        .logo
+            color: white
+
+        .light-icon:before
+            background-image: url("../../img/icons/dark/setting-light.svg")
+
+        .dark-icon:before
+            background-image: url("../../img/icons/dark/setting-dark.svg")

@@ -1,0 +1,439 @@
+@import 'typography'
+@import 'colors'
+@import 'animations'
+@import 'light'
+@import 'dark'
+
+body,
+html
+    margin: 0
+    padding: 0
+    height: calc(100% - 72px)
+    width: 100%
+
+body
+    &[data-color="coral"]
+
+        .icon-wrap,
+        .mouse-cursor-gradient-tracking
+            @extend .coral-gradient
+
+        .pageBorder
+            background-color: $coral-dark
+
+    &[data-color="turqoise"]
+
+        .icon-wrap,
+        .mouse-cursor-gradient-tracking
+            @extend .turqoise-gradient
+
+        .pageBorder
+            background-color: $turqoise
+
+    &[data-color="green"]
+
+        .icon-wrap,
+        .mouse-cursor-gradient-tracking
+            @extend .green-gradient
+
+        .pageBorder
+            background-color: $green
+
+    &[data-color="blue"]
+
+        .icon-wrap,
+        .mouse-cursor-gradient-tracking
+            @extend .blue-gradient
+
+        .pageBorder
+            background-color: $blue
+
+    &[data-color="pink"]
+
+        .icon-wrap,
+        .mouse-cursor-gradient-tracking
+            @extend .pink-gradient
+
+        .pageBorder
+            background-color: $pink
+
+.btn-hover
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2) inset
+    filter: brightness(0.95)
+
+.btn-clicked
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3) inset
+    filter: brightness(0.9)
+
+.attract-hover
+    display: block
+
+.pageBorder
+    position: absolute
+    animation-duration: 0.5s
+    animation-fill-mode: both
+    transition: all cubic-bezier(0.985, 0.010, 0.620, 1.145)
+
+    &-Top,
+    &-Bottom
+        height: 13px
+        animation-name: pageBorderHorizontal
+
+    &-Left,
+    &-Right
+        width: 13px
+        animation-name: pageBorderVertical
+
+    &-Top
+        top: 0
+        left: 0
+
+    &-Bottom
+        bottom: 0
+        right: 0
+
+    &-Left
+        left: 0
+        bottom: 0
+
+    &-Right
+        right: 0
+        top: 0
+
+.page-wrapper
+    background-color: #FFF
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    height: 100%
+    margin: 12px
+    padding: 60px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    position: relative
+
+    &:before
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        width: 100%
+        height: 100%
+
+    &.animateIn
+        animation-name: animateIn
+        animation-delay: 0.2s
+        animation-duration: 0.5s
+        animation-fill-mode: both
+
+.logo-wrapper
+    display: flex
+
+    &:hover
+        .photo
+            img
+                transform: scale(1.25)
+
+    .photo
+        overflow: hidden
+        border-radius: 85px
+        width: 85px
+        height: 85px
+
+        img
+            width: 100%
+            height: 100%
+            transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+    .logo
+        padding-left: 10px
+        padding-top: 10px
+        overflow: hidden
+
+        p
+            max-width: 200px
+            margin: 0
+            line-height: 1
+            transform: translateX(-200px)
+            transition: all 0.4s ease-in-out
+            transition-delay: 0.4s
+
+            &.loaded
+                transform: translateY(0)
+
+.intro-wrapper
+    text-align: center
+
+    &.hidden
+        transform: scale(0)
+        opacity: 0
+
+    h1
+        padding-bottom: 40px
+        transition: all 0.2s ease-in-out
+
+.header
+    position: absolute
+    top: 60px
+
+.settings-wrapper
+    backdrop-filter: blur(2px)
+    border-radius: 40px
+    padding: 20px
+    margin: 0 auto
+    width: 500px
+    position: relative
+    padding-bottom: 40px
+
+    .description
+        h2
+            font-size: 20px
+            transition: all 0.2s ease-in-out
+
+    .settings
+        display: inline-block
+
+        .attract-hover
+            float: left
+
+        &-icon
+            &-wrap
+                width: 100px
+                margin: 10px
+                float: left
+                cursor: pointer
+
+                &:hover
+                    .icon-wrap
+                        @extend .btn-hover
+
+                &.clicked
+                    .icon-wrap
+                        @extend .btn-clicked
+
+                h3
+                    display: inline-block
+                    font-size: 15px
+                    margin-top: 10px
+
+    .icon
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        margin: 0 auto
+
+        &-wrap
+            width: 100px
+            height: 100px
+            float: left
+            border-radius: 30px
+            display: flex
+            align-items: center
+            transition: all 0.15s ease-in-out
+
+        &-theme
+            background-image: url("../../img/icons/light/theme.svg")
+            width: 60px
+            height: 50px
+
+        &-sound
+            background-image: url("../../img/icons/light/sound.svg")
+            width: 50px
+            height: 50px
+
+            &.muted
+                background-image: url("../../img/icons/light/muted.svg")
+                width: 20px
+                height: 30px
+
+        &-color
+            background-image: url("../../img/icons/light/color.svg")
+            width: 50px
+            height: 50px
+
+        &-vibe
+            background-image: url("../../img/icons/light/vibe.svg")
+            width: 45px
+            height: 45px
+
+    .button
+        position: absolute
+        bottom: -30px
+        left: 35%
+        right: 35%
+        margin: 0 auto
+        transition: all 0.25s ease-in-out
+
+        &:hover
+            @extend .btn-hover
+
+        &.clicked,
+        &:active,
+        &:focus
+            @extend .btn-clicked
+
+.button
+    padding: 22px 45px
+    border-radius: 40px
+    color: #FFF
+    font-size: 20px
+
+    &.zoomOnHover
+        &:hover
+            transform: scale(1.1)
+
+.mouse-cursor-gradient-tracking
+    position: relative
+    color: white
+    cursor: pointer
+    outline: none
+    overflow: hidden
+
+.mouse-cursor-gradient-tracking span
+    position: relative
+    pointer-events: none
+
+.mouse-cursor-gradient-tracking:before
+    --size: 0
+    content: ''
+    position: absolute
+    left: var(--x)
+    top: var(--y)
+    width: var(--size)
+    height: var(--size)
+    background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.2), transparent)
+    transform: translate(-50%, -50%)
+    transition: width 0.2s ease, height 0.2s ease
+
+.mouse-cursor-gradient-tracking:hover:before
+    --size: 200px
+
+.collapsable
+    position: relative
+    border-radius: 25px
+    margin-bottom: 20px
+    height: 80px
+    transition: all 0.2s ease-in-out
+
+    &-wrapper
+        overflow: hidden
+        padding-top: 15px
+        transition: all 0.2s ease-in-out
+
+        &.hidden
+            opacity: 0
+            transform: scale(0)
+            transform-origin: top
+            height: 0
+            filter: blur(20px)
+
+        &.open
+            transform: scale(1)
+
+    &-item
+        opacity: 0
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: all 0.2s ease-in-out
+        pointer-events: none
+
+        &.visible
+            pointer-events: visible
+
+        ul
+            list-style: none
+            margin: 0
+            padding: 0
+            display: inline-block
+
+        li,
+        p
+            font-family: 'Mont Heavy DEMO', sans-serif
+            font-size: 18px
+            color: $dark
+            float: left
+
+        &.visible
+            opacity: 1
+
+        li
+            position: relative
+            display: flex
+            align-items: center
+            padding-right: 30px
+            cursor: pointer
+            transition: all .2s ease-in-out
+            opacity: 0.4
+
+            &.active,
+            &.tempActive
+                opacity: 1
+
+            &.dim
+                opacity: 0.4
+
+            &:hover
+                transform: scale(1.2)
+
+                &:not(.active)
+                    opacity: 1
+
+            &:before
+                content: ''
+                background-size: cover
+                background-repeat: no-repeat
+                margin-right: 10px
+                transition: all 0.2s ease-in-out
+
+        .light-icon:before
+            width: 22px
+            height: 22px
+
+        .dark-icon:before
+            width: 14px
+            height: 14px
+            margin-top: -3px
+
+.arrow-up
+    width: 0
+    height: 0
+    border-left: 15px solid transparent
+    border-right: 15px solid transparent
+    border-bottom: 15px solid
+    position: absolute
+    top: -15px
+    left: 40px
+    transition: all 0.2s ease-in-out
+
+.color-chooser
+    li
+        width: 33px
+        height: 33px
+        border-radius: 33px
+        padding-right: 0
+        margin-right: 15px
+
+        &.coral
+            background-color: $coral-dark
+
+        &.turqoise
+            background-color: $turqoise
+
+        &.green
+            background-color: $green
+
+        &.blue
+            background-color: $blue
+
+        &.pink
+            background-color: $pink
+// @import 'responsive'

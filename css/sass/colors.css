@@ -1,0 +1,25 @@
+.coral-gradient {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#FF8362), to(#ff5c40));
+  background-image: linear-gradient(to bottom right, #FF8362, #ff5c40);
+}
+
+.turqoise-gradient {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#3EEFCF), to(#16CFAE));
+  background-image: linear-gradient(to bottom right, #3EEFCF, #16CFAE);
+}
+
+.green-gradient {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#08CB56), to(#0EB450));
+  background-image: linear-gradient(to bottom right, #08CB56, #0EB450);
+}
+
+.blue-gradient {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#09A0E1), to(#0380B6));
+  background-image: linear-gradient(to bottom right, #09A0E1, #0380B6);
+}
+
+.pink-gradient {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#FF90CC), to(#F160AF));
+  background-image: linear-gradient(to bottom right, #FF90CC, #F160AF);
+}
+/*# sourceMappingURL=colors.css.map */
