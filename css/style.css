@@ -500,11 +500,11 @@ body[data-color="coral"] .mouse-cursor-gradient-tracking {
 }
 
 [data-theme="light"] .light-icon:before {
-  background-image: url("../img/icons/light/setting-theme.svg");
+  background-image: url("../../img/icons/light/setting-theme.svg");
 }
 
 [data-theme="light"] .dark-icon:before {
-  background-image: url("../img/icons/light/setting-theme-dark.svg");
+  background-image: url("../../img/icons/light/setting-theme-dark.svg");
 }
 
 @media (prefers-color-scheme: light) {
@@ -530,10 +530,10 @@ body[data-color="coral"] .mouse-cursor-gradient-tracking {
     background-color: rgba(255, 255, 255, 0.5);
   }
   [data-theme="light"] .light-icon:before {
-    background-image: url("../img/icons/light/setting-theme.svg");
+    background-image: url("../../img/icons/light/setting-theme.svg");
   }
   [data-theme="light"] .dark-icon:before {
-    background-image: url("../img/icons/light/setting-theme-dark.svg");
+    background-image: url("../../img/icons/light/setting-theme-dark.svg");
   }
 }
 
@@ -569,11 +569,11 @@ body[data-color="coral"] .mouse-cursor-gradient-tracking {
 }
 
 [data-theme="dark"] .light-icon:before {
-  background-image: url("../img/icons/dark/setting-light.svg");
+  background-image: url("../../img/icons/dark/setting-light.svg");
 }
 
 [data-theme="dark"] .dark-icon:before {
-  background-image: url("../img/icons/dark/setting-dark.svg");
+  background-image: url("../../img/icons/dark/setting-dark.svg");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -602,10 +602,10 @@ body[data-color="coral"] .mouse-cursor-gradient-tracking {
     color: white;
   }
   [data-theme="dark"] .light-icon:before {
-    background-image: url("../img/icons/dark/setting-light.svg");
+    background-image: url("../../img/icons/dark/setting-light.svg");
   }
   [data-theme="dark"] .dark-icon:before {
-    background-image: url("../img/icons/dark/setting-dark.svg");
+    background-image: url("../../img/icons/dark/setting-dark.svg");
   }
 }
 
@@ -832,25 +832,25 @@ html {
 }
 
 .settings-wrapper .icon-theme {
-  background-image: url("../img/icons/light/theme.svg");
+  background-image: url("../../img/icons/light/theme.svg");
   width: 60px;
   height: 50px;
 }
 
 .settings-wrapper .icon-sound {
-  background-image: url("../img/icons/light/sound.svg");
+  background-image: url("../../img/icons/light/sound.svg");
   width: 50px;
   height: 50px;
 }
 
 .settings-wrapper .icon-color {
-  background-image: url("../img/icons/light/color.svg");
+  background-image: url("../../img/icons/light/color.svg");
   width: 50px;
   height: 50px;
 }
 
 .settings-wrapper .icon-vibe {
-  background-image: url("../img/icons/light/vibe.svg");
+  background-image: url("../../img/icons/light/vibe.svg");
   width: 45px;
   height: 45px;
 }
