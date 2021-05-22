@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "jquery": "^3.5.1",
+    "node-sass": "^6.0.0",
     "vanilla-tilt": "^1.7.0"
   },
   "devDependencies": {},
