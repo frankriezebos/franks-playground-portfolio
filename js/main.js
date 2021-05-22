@@ -11,7 +11,8 @@ import {
     followMouse
 } from "./followMouse.js";
 import {
-    themeSwitch
+    themeSwitch,
+    colorSwitch
 } from "./themeSwitch.js";
 
 $(window).on('load', function () {
@@ -23,4 +24,5 @@ $(document).ready(function () {
     settingsCollapse();
     followMouse();
     themeSwitch();
+    colorSwitch();
 });

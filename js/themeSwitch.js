@@ -60,3 +60,15 @@ export function themeSwitch() {
         $('[data-trigger-theme="dark"]').addClass('active');
     }
 }
+
+export function colorSwitch() {
+    $('[data-trigger-color]').click(function() {
+        var clickedColor = $(this).attr('data-trigger-color');
+        $('body').attr('data-color', clickedColor);
+        $('[data-trigger-color]').removeClass('active');
+        $('[data-trigger-color]').removeClass('tempActive');
+        $('[data-trigger-color]').addClass('dim');
+        $(this).removeClass('dim');
+        $(this).addClass('active');
+    });
+}
