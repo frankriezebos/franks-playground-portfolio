@@ -6,12 +6,20 @@ export function settingsCollapse() {
         $('.collapsable-item').removeClass('visible');
         $('.collapsable-item[data-target-setting="' + dataTriggerSettingAttr + '"]').addClass('visible');
 
-        if ($(this).hasClass('clicked')) {
+        // when you click on the sound icon, it will switch to mute
+        if ( dataTriggerSettingAttr == 'sound' ) {
+            console.log('sound');
+            $('.icon-sound').toggleClass('muted');
+        }
+
+        // close the collapsable wrapper with the options
+        else if ($(this).hasClass('clicked')) {
             $(this).removeClass('clicked');
             $('.collapsable-wrapper').removeClass('popIn');
             $('.collapsable-wrapper').addClass('popOut');
         }
 
+        // open the collapsable wrapper with the options
         else {
             $('.collapsable-wrapper').removeClass('popOut');
             $('.collapsable-wrapper').removeClass('hidden');

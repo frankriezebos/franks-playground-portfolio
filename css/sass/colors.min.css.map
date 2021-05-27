@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAeA,AAAA,eAAe,AAAC,CACZ,gBAAgB,CAAE,kDAAqD,CAAG,AAE9E,AAAA,kBAAkB,AAAC,CACf,gBAAgB,CAAE,kDAA2D,CAAG,AAEpF,AAAA,eAAe,AAAC,CACZ,gBAAgB,CAAE,kDAAqD,CAAG,AAE9E,AAAA,cAAc,AAAC,CACX,gBAAgB,CAAE,kDAAmD,CAAG,AAE5E,AAAA,cAAc,AAAC,CACX,gBAAgB,CAAE,kDAAmD,CAAG",
+    "sources": [
+        "colors.sass"
+    ],
+    "names": [],
+    "file": "colors.min.css"
+}

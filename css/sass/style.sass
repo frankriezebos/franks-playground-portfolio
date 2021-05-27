@@ -12,8 +12,11 @@ html
     width: 100%
 
 body
+    border-radius: 20px
+    
     &[data-color="coral"]
-
+        background-color: $coral-dark
+        
         .icon-wrap,
         .mouse-cursor-gradient-tracking
             @extend .coral-gradient
@@ -112,6 +115,7 @@ body
     flex-direction: column
     justify-content: center
     position: relative
+    border-radius: 20px
 
     &:before
         content: ''
