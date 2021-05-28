@@ -10,6 +10,14 @@ export function settingsCollapse() {
         if ( dataTriggerSettingAttr == 'sound' ) {
             console.log('sound');
             $('.icon-sound').toggleClass('muted');
+            $('.collapsable-wrapper').removeClass('popIn');
+            $('.collapsable-wrapper').addClass('popOut');
+
+            if ( $('.icon-sound').hasClass('muted') ) {
+                $('.sound-indicator').html('off');
+            } else {
+                $('.sound-indicator').html('on');
+            }
         }
 
         // close the collapsable wrapper with the options
