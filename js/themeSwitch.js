@@ -43,22 +43,22 @@ export function themeSwitch() {
     window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
         const newColorScheme = e.matches ? "light" : "dark";
     });
+}
 
-    function makeItLight() {
-        $('body').attr('data-theme', 'light');
-        $('[data-trigger-theme="dark"]').removeClass('active');
-        $('[data-trigger-theme="dark"]').addClass('dim');
-        $('[data-trigger-theme="light"]').removeClass('dim');
-        $('[data-trigger-theme="light"]').addClass('active');
-    }
+function makeItLight() {
+    $('body').attr('data-theme', 'light');
+    $('[data-trigger-theme="dark"]').removeClass('active');
+    $('[data-trigger-theme="dark"]').addClass('dim');
+    $('[data-trigger-theme="light"]').removeClass('dim');
+    $('[data-trigger-theme="light"]').addClass('active');
+}
 
-    function makeItDark() {
-        $('body').attr('data-theme', 'dark');
-        $('[data-trigger-theme="light"]').removeClass('active');
-        $('[data-trigger-theme="light"]').addClass('dim');
-        $('[data-trigger-theme="dark"]').removeClass('dim');
-        $('[data-trigger-theme="dark"]').addClass('active');
-    }
+function makeItDark() {
+    $('body').attr('data-theme', 'dark');
+    $('[data-trigger-theme="light"]').removeClass('active');
+    $('[data-trigger-theme="light"]').addClass('dim');
+    $('[data-trigger-theme="dark"]').removeClass('dim');
+    $('[data-trigger-theme="dark"]').addClass('active');
 }
 
 export function colorSwitch() {
@@ -70,5 +70,34 @@ export function colorSwitch() {
         $('[data-trigger-color]').addClass('dim');
         $(this).removeClass('dim');
         $(this).addClass('active');
+    });
+}
+
+export function vibeSwitch() {
+    $('[data-trigger-vibe]').click(function() {
+        var clickedVibe = $(this).attr('data-trigger-vibe');
+        $('body').attr('data-vibe', clickedVibe);
+        $('[data-trigger-vibe]').removeClass('active');
+        $('[data-trigger-vibe]').removeClass('tempActive');
+        $('[data-trigger-vibe]').addClass('dim');
+        $(this).removeClass('dim');
+        $(this).addClass('active');
+
+        if ( clickedVibe == 'ocean' ) {
+            $('.vibe-indicator').html('Ocean');
+            makeItLight();
+        } else if ( clickedVibe == 'beach' ) {
+            $('.vibe-indicator').html('Beach');
+            makeItLight();
+        } else if ( clickedVibe == 'space' ) {
+            $('.vibe-indicator').html('Space');
+            makeItDark();
+        } else if ( clickedVibe == 'forest' ) {
+            $('.vibe-indicator').html('Forest');
+            makeItLight();
+        } else if ( clickedVibe == 'mountains' ) {
+            $('.vibe-indicator').html('Mountains');
+            makeItLight();
+        }
     });
 }

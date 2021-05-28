@@ -12,7 +12,8 @@ import {
 } from "./followMouse.js";
 import {
     themeSwitch,
-    colorSwitch
+    colorSwitch,
+    vibeSwitch
 } from "./themeSwitch.js";
 
 $(window).on('load', function () {
@@ -25,4 +26,5 @@ $(document).ready(function () {
     followMouse();
     themeSwitch();
     colorSwitch();
+    vibeSwitch();
 });
