@@ -27,6 +27,18 @@ export function settingsCollapse() {
             $('.collapsable-wrapper').addClass('popIn');
             $('.settings-icon-wrap').removeClass('clicked');
             $(this).addClass('clicked');
+
+            if ( dataTriggerSettingAttr == 'theme' ) {
+                $('.arrow-up').css('left', '40px');
+            }
+
+            if ( dataTriggerSettingAttr == 'color' ) {
+                $('.arrow-up').css('left', '295px');
+            }
+
+            if ( dataTriggerSettingAttr == 'vibe' ) {
+                $('.arrow-up').css('left', '415px');
+            }
         }
     });
 }
