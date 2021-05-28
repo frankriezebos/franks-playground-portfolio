@@ -12,13 +12,13 @@
     <link href="css/sass/style.min.css" rel="stylesheet">
 </head>
 
-<body data-theme="light" data-color="coral" data-sound="on" data-vibe="beach">
-    <div class="pageBorder pageBorder-Top animateInDelayMiliSeconds-6"></div>
+<body data-theme="light" data-color="coral" data-sound="off" data-vibe="beach">
+    <!-- <div class="pageBorder pageBorder-Top animateInDelayMiliSeconds-6"></div>
     <div class="pageBorder pageBorder-Right animateInDelayMiliSeconds-7"></div>
     <div class="pageBorder pageBorder-Bottom animateInDelayMiliSeconds-8"></div>
-    <div class="pageBorder pageBorder-Left animateInDelayMiliSeconds-9"></div>
+    <div class="pageBorder pageBorder-Left animateInDelayMiliSeconds-9"></div> -->
 
-    <div class="page-wrapper" style="background-image:url('img/wallpapers/beach.jpg')">
+    <div class="page-wrapper">
         <div class="header">
             <div class="logo-wrapper">
                 <div class="photo">
@@ -51,9 +51,9 @@
 
                     <div class="settings-icon-wrap" data-trigger-setting="sound">
                         <div class="icon-wrap">
-                            <div class="icon icon-sound"></div>
+                            <div class="icon icon-sound muted"></div>
                         </div>
-                        <h3>Sound <span class="sound-indicator">on</span></h3>
+                        <h3>Sound <span class="sound-indicator">off</span></h3>
                     </div>
 
                     <div class="settings-icon-wrap" data-trigger-setting="color">
@@ -67,7 +67,7 @@
                         <div class="icon-wrap">
                             <div class="icon icon-vibe"></div>
                         </div>
-                        <h3>Beach</h3>
+                        <h3 class="vibe-indicator">Beach</h3>
                     </div>
                 </div>
 
@@ -92,7 +92,13 @@
                         </div>
 
                         <div class="collapsable-item" data-target-setting="vibe">
-                            Vibe
+                            <ul class="vibe-chooser">
+                                <li class="beach active" data-trigger-vibe="beach"></li>
+                                <li class="space" data-trigger-vibe="space"></li>
+                                <li class="ocean" data-trigger-vibe="ocean"></li>
+                                <li class="forest" data-trigger-vibe="forest"></li>
+                                <li class="mountains" data-trigger-vibe="mountains"></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
